@@ -11,11 +11,11 @@
         <br>
         <br>
         <!-- Login Form -->
-        <form>
-            <input type="text" placeholder="Usuario">
-            <input type="password" placeholder="Contraseña">
+        <form [formGroup]="formLogin">
+            <input type="text"  formControlName="res_usuario" placeholder="Usuario" form>
+            <input type="password" formControlName="res_clave" placeholder="Contraseña">
             <br><br>
-            <input type="submit" class="fadeIn fourth" value="Inciar Sesión">
+            <input type="button"  (click)="Login(formLogin.value)" class="fadeIn fourth" value="Inciar Sesión">
         </form>
 
 
