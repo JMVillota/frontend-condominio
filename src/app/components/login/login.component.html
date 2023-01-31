@@ -12,10 +12,14 @@
         <br>
         <!-- Login Form -->
         <form [formGroup]="formLogin">
-            <input type="text"  formControlName="res_usuario" placeholder="Usuario" form>
+            <input type="text" formControlName="res_usuario" placeholder="Usuario" form>
             <input type="password" formControlName="res_clave" placeholder="Contraseña">
-            <br><br>
-            <input type="button"  (click)="Login(formLogin.value)" class="fadeIn fourth" value="Inciar Sesión">
+            <br>
+            <div class="container__resp" *ngIf="estado">
+                <h4>{{resp}}</h4>
+            </div>
+          
+            <input type="button" (click)="Login(formLogin.value)" class="fadeIn fourth" value="Inciar Sesión">
         </form>
 
 
@@ -23,6 +27,7 @@
         <div id="formFooter">
             <a class="underlineHover" href="#">Forgot Password?</a>
         </div>
+
 
     </div>
 </div>

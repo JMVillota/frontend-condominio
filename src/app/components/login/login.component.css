@@ -293,3 +293,15 @@
         width:60%;
       }
   
+
+      .container__resp{
+        display: flex;
+        justify-items: center;
+        justify-content: center;
+        text-align: center;
+        color: rgb(164, 41, 41);
+        /* background-color: rgb(207, 101, 101); */
+        width: 85%;
+        margin-left: 34px;
+       
+      }

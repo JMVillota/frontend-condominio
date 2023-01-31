@@ -11,6 +11,9 @@ import { LoginService } from 'src/app/servicios/login/login.service';
 })
 export class LoginComponent implements OnInit {
 
+
+  estado: boolean = false;
+  resp: string = "";
   constructor(private loginServices: LoginService, private cookieService: CookieService, private router: Router) { }
 
   ngOnInit(): void {
@@ -24,12 +27,17 @@ export class LoginComponent implements OnInit {
   });
 
   public Login(form: any) {
-
+    this.estado = false;
     this.loginServices.Login(form).subscribe((data: any) => {
-      console.log(data.resp)
-      this.cookieService.set('token', data.resp, 4, '/');
-      this.router.navigate(['/dashboard']);
-
+      console.log(data);
+      if (data.status == 'Error') {
+        this.estado = true;
+        this.resp = data.resp;
+      } else {
+        this.estado = false;
+        this.cookieService.set('token', data.token, 4, '/');
+        this.router.navigate(['/dashboard']);
+      }
     })
 
   }
