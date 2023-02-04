@@ -14,15 +14,24 @@ import { UsuariosComponent } from './components/usuarios/usuarios.component';
 const routes: Routes = [
   { path: "", redirectTo: "login", pathMatch: "full" },
   { path: "login", component: LoginComponent },
-  { path: "residente", component: ResidenteComponent,canActivate:[UserGuardGuard] },
-  {path: "main", component: MainComponent},
-  {path: "administracion", component: AdministracionComponent},
-  {path: "contabilidad", component: ContabilidadComponent},
-  {path: "reservaciones", component: ReservacionesComponent},
-  {path: "seguridad", component: SeguridadComponent},
-  {path: "usuarios", component: UsuariosComponent},
+  { path: "residente", component: ResidenteComponent, canActivate: [UserGuardGuard] },
+  { path: "main", component: MainComponent },
+  {
+    path: "administracion", component: AdministracionComponent, children: [{
+      path: "residente", component: ResidenteComponent
+    }]
+  },
+  { path: "contabilidad", component: ContabilidadComponent },
+  { path: "reservaciones", component: ReservacionesComponent },
+  {
+    path: "seguridad", component: SeguridadComponent, children: [{
+      path: "usuarioE", component: UsuarioexternoComponent
+    }]
+  },
+  { path: "usuarios", component: UsuariosComponent },
 
-  
+
+
 
 ];
 

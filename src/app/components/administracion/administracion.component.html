@@ -1,3 +1,29 @@
 <app-header></app-header>
+<h1 style="text-align: center;">Gestión Adminitrativa</h1>
+<br>
+<ul class="nav justify-content-center">
+
+    <li class="nav-item">
+
+        <a style="border: solid 1px; border-radius: 7px;" class="nav-link active"
+            [routerLink]="['/administracion/residente']">Condominos</a>
+    </li>
+    <li class="nav-item">
+
+        <a style="border: solid 1px; border-radius: 7px;" class="nav-link active"
+            [routerLink]="['/seguridad/usuarioE']">Accedo sistema</a>
+    </li>
+    <li class="nav-item">
+
+        <a style="border: solid 1px; border-radius: 7px;" class="nav-link active"
+            [routerLink]="['/seguridad/usuarioE']">Administración</a>
+    </li>
+
+</ul>
+<br>
+<div class="container">
+    <router-outlet></router-outlet>
+</div>
+
 
 <app-footer></app-footer>
