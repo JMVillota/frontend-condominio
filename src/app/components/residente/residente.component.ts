@@ -21,21 +21,15 @@ export class ResidenteComponent implements OnInit {
 
 
   getAllResidente() {
-
     let httpHeaders: HttpHeaders = new HttpHeaders();
     const token = this.cookieService.get('token');
-
-
     httpHeaders = httpHeaders.append('Authorization', 'Bearer ' + token)
-
     let direccion = this.url + "Residente";
     this.http.get<ModelResidenteI[]>(direccion, {
       headers: httpHeaders,
       observe: 'response'
     })
       .subscribe(res => {
-        //  console.log(res.body)
-
         this.residentes = res.body;
       })
   }

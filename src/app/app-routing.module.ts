@@ -1,15 +1,29 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ResidenteComponent } from './components/residente/residente.component';
 import { UserGuardGuard } from './user-guard.guard';
+import { MainComponent } from './components/main/main.component';
+import { AdministracionComponent } from './components/administracion/administracion.component';
+import { ContabilidadComponent } from './components/contabilidad/contabilidad.component';
+import { ReservacionesComponent } from './components/reservaciones/reservaciones.component';
+import { SeguridadComponent } from './components/seguridad/seguridad.component';
+import { UsuarioexternoComponent } from './components/usuarioexterno/usuarioexterno.component';
+import { UsuariosComponent } from './components/usuarios/usuarios.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "login", pathMatch: "full" },
   { path: "login", component: LoginComponent },
-  { path: "dashboard", component: DashboardComponent },
-  { path: "residente", component: ResidenteComponent,canActivate:[UserGuardGuard] }
+  { path: "residente", component: ResidenteComponent,canActivate:[UserGuardGuard] },
+  {path: "main", component: MainComponent},
+  {path: "administracion", component: AdministracionComponent},
+  {path: "contabilidad", component: ContabilidadComponent},
+  {path: "reservaciones", component: ReservacionesComponent},
+  {path: "seguridad", component: SeguridadComponent},
+  {path: "usuarios", component: UsuariosComponent},
+
+  
+
 ];
 
 @NgModule({

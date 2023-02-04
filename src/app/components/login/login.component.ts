@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
       } else {
         this.estado = false;
         this.cookieService.set('token', data.token, 4, '/');
-        this.router.navigate(['/dashboard']);
+        this.router.navigate(['/main']);
       }
     })
 
