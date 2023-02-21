@@ -1,3 +1,25 @@
 <app-header></app-header>
+<br>
+<ul class="nav justify-content-center">
 
-<app-footer></app-footer>
+    <li class="nav-item">
+
+        <a style="border: solid 1px; border-radius: 7px;" class="nav-link active"
+            [routerLink]="['/main']">Regresar</a>
+    </li>
+
+</ul>
+<div class="container">
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" [routerLink]="['/usuarios/cuentasPendientes']">Cuentas</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/usuarios/reservaciones']">Reservaciones</a>
+        </li>
+    
+    </ul>
+</div>
+
+<br>
+<div class="container"><router-outlet></router-outlet></div>

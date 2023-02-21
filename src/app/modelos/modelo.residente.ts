@@ -6,5 +6,6 @@ export interface ModelResidenteI {
     res_correo: string,
     res_telefono: string,
     res_clave: string,
-    res_usuario: string
+    res_usuario: string,
+    res_id:string
 }

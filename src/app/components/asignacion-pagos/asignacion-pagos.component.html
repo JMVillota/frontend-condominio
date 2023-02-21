@@ -1,0 +1,17 @@
+<div style="text-align: center; background: rgba(89, 159, 199);">
+    <h1>Alícutas y Pagos</h1>
+</div>
+<ul class="nav nav-tabs">
+    <li class="nav-item" (click)="changeActiveA()">
+        <a class="nav-link" [ngClass]="{'active':activoA==true}"
+            [routerLink]="['/administracion/pagos/editAlicuota']">Cuotas</a>
+    </li>
+    <li class="nav-item" (click)="changeActiveC()">
+        <a class="nav-link" [ngClass]="{'active':activoC==true}"
+            [routerLink]="['/administracion/pagos/monto']">Multas</a>
+    </li>
+</ul>
+<br>
+<div class="container">
+    <router-outlet></router-outlet>
+</div>

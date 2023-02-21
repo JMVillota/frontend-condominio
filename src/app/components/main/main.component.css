@@ -192,34 +192,140 @@ a {
 
 
 
-/* Desing footer */
-
-
+  
 footer {
-    /* position: absolute; */
+    height: 30px;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
     bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+ 
+  
+  .footer-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .footer-links ul li {
+    margin-right: 20px;
+  }
+  
+  .footer-links ul li:last-child {
+    margin-right: 0;
+  }
+  
+  .footer-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .footer-social ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .footer-social ul li {
+    margin-right: 20px;
+  }
+  
+  .footer-social ul li:last-child {
+    margin-right: 0;
+  }
+  
+  .footer-social ul li a {
+    color: #fff;
+    font-size: 18px;
+  }
+  
+
+
+
+  /* VErsion 1 */
+
+
+  .card {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background-color:  rgba(89, 159, 199);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin: 20px;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+  }
+  
+  .card .title {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .card:hover .title {
+    top: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  }
+  
+  .card .underline {
+    width: 50px;
+    height: 3px;
+    background-color:#fff;
+    margin-top: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .card:hover .underline {
     width: 100%;
-}
+  }
+  
+  .card .content {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 3rem;
+    color:#fff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .card:hover .content {
+    font-size: 4rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  }
+   
 
-.decoration {
-    margin-top: 1.5em;
-    background: #111;
-    height: 8px;
-}
 
-.footer-bottom {
-    background: #000;
-    width: 100%;
-    padding: 5px 0;
-    text-align: center;
-}
 
-.footer-bottom__copyright {
-    /* text-transform: uppercase; */
-    font-family: 'Roboto', sans-serif;
-    opacity: .4;
-    font-weight: 200;
-    color: white;
-    opacity: 0.5;
-    font-size: 0.9rem;
-}
+   
+
+   
+
+   

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment.prod';
 
 @Injectable({
   providedIn: 'root'
@@ -8,17 +9,29 @@ export class UsuarioEService {
   url: string = 'https://condominio-api.up.railway.app/';
   constructor(private http: HttpClient) { }
 
-  getAllUsuariosExternos() {
-    let direccion = this.url + "usuarioExterno";
-    return this.http.get(direccion);
+  public getAllUsuarioExterno() {
+    const url = environment.base_url + `usuarioExterno`
+    return this.http.get(url)
   }
 
-  // Login(form: any) {
-  //   let direccion = this.url + "auth";
-  //   return this.http.post(direccion, form);
-  // }
-  // updateAutoridad(form: any) {
-  //   let direccion = this.url + "autoridades";
-  //   return this.http.put(direccion, form);
-  // }
+  public getAllPersona() {
+    const url = environment.base_url + `Persona`
+    return this.http.get(url)
+  }
+
+  public postCreateUsuarioExterno(body: any) {
+    const url = environment.base_url + `usuarioExterno`
+    return this.http.post(url, body)
+  }
+
+  public putUpdateUsuarioExterno(body: any) {
+    console.log(body)
+    const url = environment.base_url + `usuarioExterno/` + body.use_id
+    return this.http.put(url, body)
+  }
+
+  public deleteUsuarioExterno(use_id: any) {
+    const url = environment.base_url + `usuarioExterno/` + use_id
+    return this.http.delete(url)
+  }
 }
